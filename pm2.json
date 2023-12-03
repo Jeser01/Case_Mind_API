@@ -1,0 +1,5 @@
+{
+  "name": "new-service",
+  "script": "index.js",
+  "instances": "1"
+}

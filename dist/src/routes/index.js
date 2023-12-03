@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.routes = void 0;
+const express_1 = require("express");
+const helloWorld_1 = require("./helloWorld");
+const middlewares_1 = require("./middlewares");
+exports.routes = (0, express_1.Router)();
+exports.routes.use("/helloWorld", middlewares_1.apiKeyAuth, helloWorld_1.helloWorld);
+exports.routes.use(middlewares_1.errorNotFound);
+exports.routes.use(middlewares_1.errorBase);
